@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css"
+    <title>Mysql Technical Documentation</title>
+</head>
+<body>
+    <nav>
+        <header>
+            <h1>Mysql Documentation</h1>
+        </header>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#historymysql">History of MySQL</a></li>
+            <li><a href="#sampletable">Sample Table</a></li>
+            <li><a href="#selectcommand">Select Command</a></li>
+            <li><a href="#insertcommand">Insert Command</a></li>
+            <li><a href="#updatecommand">Update Command</a></li>
+            <li><a href="#deletecommand">Delete Command</a></li>
+            <li><a href="#reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="introduction">
+            <h1>Introduction</h1>
+            <article>
+                <p>This technical documentation is for educational purposes only, the scope of this documentation only covers simple CRUD commands.</p>    
+            </article>
+        </section>
+        <section>
+            <h1>History of MySQL</h1>
+            <article>
+                <p><span class="indented">MySQL</span> was created by a Swedish company, MySQL AB, founded by Swedes David Axmark, Allan Larsson and Finland Swede Michael "Monty" Widenius. Original development of MySQL by Widenius and Axmark began in 1994. The first version of MySQL appeared on 23 May 1995.</p>
+            </article>
+        </section>
+        <section>
+            <h1>Sample Data Collection</h1>
+            <article>
+                <table>
+                    <caption>Employee's Table</caption>
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Birthdate</th>
+                        <th>Address</th>
+                        <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>January 14, 2001</td>
+                            <td>112 11 Oxford Street Pasay City</td>
+                            <td>Encoder</td>
+                        </tr>
+                        <tr>
+                            <td>Wick Wicked</td>
+                            <td>March 20, 1999</td>
+                            <td>No Trespassing Street New York</td>
+                            <td>Plumber</td>
+                        </tr>
+                        <tr>
+                            <td>Mary Palmer</td>
+                            <td>November 4, 2000</td>
+                            <td>Sitio Cupang,Alabang, Muntinglupa City</td>
+                            <td>Duct Installer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <section>
+            <h1>Select(Read) Command</h1>
+            <article>
+               <h3>Select Distinct</h3>
+               <p><span class="indented">This</span> code below will select "Distinct" values from tblEmployees</p>
+               <div class="samplecode">
+                    <p>Select Name,Position from tblEmployees;</p>
+               </div>
+               <div class="results">
+               <table>
+                    <caption>Results :</caption>
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>Encoder</td>
+                        </tr>
+                        <tr>
+                            <td>Wick Wicked</td>
+                            <td>Plumber</td>
+                        </tr>
+                        <tr>
+                            <td>Mary Palmer</td>
+                            <td>Duct Installer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </article>
+            <article>
+                <h3>Select (*) commands</h3>
+              <p class="description"></p>
+              <div class="samplecode">
+                <p>Select * from tblEmployees;</p>
+              </div>
+              <div class="results">
+                <p><span class="indented">The</span> result will only be the same as our original table or dataset.</p>
+              </div>       
+            </article>
+        </section>
+        <section>
+            <article>
+            <h3>Insert Into Command</h3>
+            <p class="description">The INSERT INTO statement is used to insert new records in a table.</p>  
+            <div class="samplecode">
+                <p>INSERT INTO table_name (Name,Birthdate,Address,Position, ...)
+                    VALUES (Aliyah Dionisio,December 25 2015,Sample Address,Artist, ...); </p>
+            </div>
+            <div class="results">
+                <table>
+                    <caption>Insert Into Results</caption>
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Birthdate</th>
+                        <th>Address</th>
+                        <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>January 14, 2001</td>
+                            <td>112 11 Oxford Street Pasay City</td>
+                            <td>Encoder</td>
+                        </tr>
+                        <tr>
+                            <td>Wick Wicked</td>
+                            <td>March 20, 1999</td>
+                            <td>No Trespassing Street New York</td>
+                            <td>Plumber</td>
+                        </tr>
+                        <tr>
+                            <td>Mary Palmer</td>
+                            <td>November 4, 2000</td>
+                            <td>Sitio Cupang,Alabang, Muntinglupa City</td>
+                            <td>Duct Installer</td>
+                        </tr>
+                        <tr class="tdhighlight">
+                            <td>Aliyah Dionisio</td>
+                            <td>December 15, 2015</td>
+                            <td>Sample Address</td>
+                            <td>Artist</td>
+                        </tr>
+                    </tbody>
+                </table>                 
+            </div>
+            </article>  
+        </section>
+    </main>
+</body>
+</html>
